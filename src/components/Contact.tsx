@@ -1,16 +1,38 @@
 import React from 'react';
-import { Instagram, Facebook, Twitter, Phone, Mail, MessageCircle } from 'lucide-react';
+import { Phone, Mail, MessageCircle } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
+
+const InstagramIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" {...props}>
+    <rect x="2" y="2" width="20" height="20" rx="5" />
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+  </svg>
+);
+
+const FacebookIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" {...props}>
+    <rect x="2" y="2" width="20" height="20" rx="5" />
+    <path d="M16 8h-2a2 2 0 0 0-2 2v8" />
+    <line x1="12" y1="12" x2="16" y2="12" />
+  </svg>
+);
+
+const TwitterXIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" {...props}>
+    <path d="M4 4L20 20M20 4L4 20" />
+  </svg>
+);
 
 const Contact: React.FC = () => {
   const { isDark } = useTheme();
 
   const socialLinks = [
-    { icon: <Instagram className="w-6 h-6" />, name: 'Instagram', handle: '@premiumbarber' },
-    { icon: <Facebook className="w-6 h-6" />, name: 'Facebook', handle: 'Premium Barber Studio' },
-    { icon: <Twitter className="w-6 h-6" />, name: 'Twitter', handle: '@premiumbarber' }
+    { icon: <InstagramIcon className="w-6 h-6" />, name: 'Instagram', handle: '@diztebarber' },
+    { icon: <FacebookIcon className="w-6 h-6" />, name: 'Facebook', handle: 'Dizteb Barber Studio' },
+    { icon: <TwitterXIcon className="w-6 h-6" />, name: 'Twitter (X)', handle: '@diztebarber' }
   ];
-
+  
   return (
     <section className="py-12 sm:py-20 px-4 sm:px-6 relative">
       <div className="max-w-4xl mx-auto">
@@ -72,7 +94,7 @@ const Contact: React.FC = () => {
                   }`}>
                     Email Us
                   </h4>
-                  <p className="text-cyan-400 font-medium">info@premiumbarber.com</p>
+                  <p className="text-cyan-400 font-medium">info@diztebarber.com</p>
                 </div>
               </div>
             </div>
