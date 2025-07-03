@@ -37,11 +37,11 @@ const Hero: React.FC = () => {
 
   return (
     <section className="relative h-screen overflow-hidden">
-      {/* Floating Cards */}
+      {/* Floating Cards positioned with higher z-index to stay on top */}
       <FloatingCards />
       
-      {/* Carousel Container */}
-      <div className="relative w-full h-full">
+      {/* Carousel Container with lower z-index */}
+      <div className="relative w-full h-full z-40">
         {slides.map((slide, index) => (
           <div
             key={index}
