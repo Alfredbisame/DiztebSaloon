@@ -14,7 +14,7 @@ const HeroIndicators: React.FC<HeroIndicatorsProps> = ({ count, current, setCurr
         key={index}
         onClick={() => setCurrent(index)}
         aria-label={`Go to slide ${index + 1}`}
-        className={`w-3 h-3 sm:w-4 sm:h-4 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 ${
+        className={`w-2 h-2 sm:w-3 sm:h-3 md:w-4 md:h-4 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 ${
           index === current 
             ? 'bg-cyan-400 shadow-lg shadow-cyan-400/50' 
             : isDark ? 'bg-white/30 hover:bg-white/50' : 'bg-gray-600/30 hover:bg-gray-600/50'

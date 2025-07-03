@@ -161,7 +161,7 @@ const FloatingCards: React.FC = () => {
   };
   
   return (
-    <div ref={containerRef} className="overflow-hidden absolute inset-0 z-70 pointer-events-none">
+    <div ref={containerRef} className="overflow-hidden absolute inset-0 z-70 pointer-events-none hidden md:block">
       {cards.map((card, index) => (
         <div
           key={index}
