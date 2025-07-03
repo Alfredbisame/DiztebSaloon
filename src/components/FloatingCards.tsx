@@ -161,12 +161,11 @@ const FloatingCards: React.FC = () => {
   };
   
   return (
-    <div ref={containerRef} className="overflow-hidden absolute inset-0 z-70">
+    <div ref={containerRef} className="overflow-hidden absolute inset-0 z-70 pointer-events-none">
       {cards.map((card, index) => (
         <div
           key={index}
-          className={`absolute ${card.position} md:${card.position} ${getMobilePosition(card.position)} transform transition-all duration-700 floating-card ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'} 
-          cursor-pointer pointer-events-auto`}
+          className={`absolute ${card.position} md:${card.position} ${getMobilePosition(card.position)} transform transition-all duration-700 floating-card ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'} ${hoveredCard === index ? 'pointer-events-auto' : ''}`}
           style={{
             animation: `animate-${card.animation}`,
             animationDelay: card.delay,
